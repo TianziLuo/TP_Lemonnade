@@ -2,20 +2,20 @@ import tkinter as tk
 from tkinter import messagebox
 import tp_tasks
 
-# 统一配色
-BG_COLOR      = "#FFFAEE"  # 米白背景
-BTN_COLOR     = "#FFF4B2"  # 淡黄按钮
-BTN_HOVER     = "#B2DFF7"  # 按钮悬停色
-LABEL_BG      = "#CBE8F3"  # 浅蓝标题背景
-TEXT_COLOR    = "#020A1B"  # 主文字颜色
-TITLE_COLOR   = "#055E61"  # Header 标题颜色
+
+BG_COLOR      = "#FFFAEE"  
+BTN_COLOR     = "#FFF4B2"  
+BTN_HOVER     = "#B2DFF7"  
+LABEL_BG      = "#CBE8F3"  
+TEXT_COLOR    = "#020A1B"  
+TITLE_COLOR   = "#055E61"  
 
 def run_safe(func, name):
     try:
         func()
-        messagebox.showinfo("完成", f"{name} 成功 ✅")
+        messagebox.showinfo("Success", f"{name} completed ✅")
     except Exception as e:
-        messagebox.showerror("错误", f"{name} 失败 ❌\n{e}")
+        messagebox.showerror("Error", f"{name} failed ❌\n{e}")
 
 def add_section(frame, title, steps):
     section = tk.LabelFrame(frame, text=title, padx=10, pady=8,
@@ -34,12 +34,12 @@ def create_ui():
     root.geometry("450x725")
     root.resizable(False, False)
 
-    # ===== Header 标题 =====
+    # ===== Header  =====
     header = tk.Label(root, text="Inventory update _ lemonnade🍹", font=("Segoe UI", 16, "bold"),
                       bg=BG_COLOR, fg=TITLE_COLOR)
     header.pack(pady=5)
 
-    # ===== 主框架 =====
+    # ===== Main Frame =====
     frame = tk.Frame(root, bg=BG_COLOR)
     frame.pack(pady=10, fill="both", expand=True)
 
