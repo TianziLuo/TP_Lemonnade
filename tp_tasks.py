@@ -1,5 +1,6 @@
 
 from pathlib import Path
+import time
 from utils.open_excel_utils import open_excel_file
 from utils.SKU_mapping import SKU_out
 from utils.copy_file_utils import copy_file_to_dirs
@@ -11,8 +12,14 @@ downloads = Path.home() / "Downloads"
 
 # === Step 1 ===
 def step_1_1(): open_excel_file(r"C:\Frank\1.1_核心.xlsx")
-def step_1_2(): SKU_out()
-def step_1_3():
+def step_1_2(): 
+
+    # SKU mapping file out
+    SKU_out()
+
+    time.sleep(20)
+
+    # copy file
     copy_file_to_dirs(
         r"C:\Users\monica\Downloads\上传易仓SKU映射关系.xls",
         [r"C:\Frank\易仓-TP"]
@@ -28,7 +35,8 @@ def step_2_2():
         output_path=downloads / "TP-Upload.csv"
     )
 
-def step_2_3a():
+def step_2_3():
+    # new TP
     teapplix_upload(
         username="wayfaircolourtree",
         email="wayfair.colourtree@gmail.com",
@@ -36,15 +44,19 @@ def step_2_3a():
         csv_path=str(downloads / "TP-Upload.csv")
     )
 
-def step_2_3b():
+    time.sleep(1)  
+
+    # old TP
     teapplix_upload(
         username="colourtree",
         email="colourtreeusa@gmail.com",
         password="Colourtree168!",
         csv_path=str(downloads / "TP-Upload.csv")
+
     )
 
-def step_2_4():
+    time.sleep(2)
+
     copy_file_to_dirs(
         str(downloads / "TP-Upload.csv"),
         [
@@ -53,10 +65,11 @@ def step_2_4():
         ]
     )
 
-def step_2_5():
+def step_2_4():
     open_excel_file(r"C:\Frank\易仓-TP\SKUINV.xlsx")
 
-def step_2_6():
+
+def step_2_5():
     copy_file_to_dirs(
         r"C:\Frank\易仓-TP\SKUINV.xlsx",
         [r"\\MICHAEL\ctshippingapp\SHIPDOC\INVUPLOAD"]
@@ -74,7 +87,9 @@ def step_3_3():
         template_path=r"C:\Template\店小秘 更新库存.xlsx",
         output_path=output
     )
-def step_3_4():
+
+    time.sleep(20)
+
     copy_file_to_dirs(
         str(downloads / "店小秘 更新库存.xlsx"),
         [

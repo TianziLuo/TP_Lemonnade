@@ -23,8 +23,7 @@ def teapplix_upload(username, email, password, csv_path):
         page.wait_for_selector('text=Quantity', timeout=10000)
         page.get_by_text("Quantity", exact=True).nth(0).click()
         print("✅ Clicked on 'Quantity'")
-
-        # Import/Export
+     # Import/Export
         page.get_by_text("Import/Export", exact=True).click()
         page.wait_for_selector("text=Create product automatically", timeout=20000)
         page.get_by_text("Create product automatically", exact=True).click()
@@ -47,6 +46,7 @@ def teapplix_upload(username, email, password, csv_path):
         browser.close()
 
 r'''
+   
 if __name__ == "__main__":
     teapplix_upload(
         username="colourtree",

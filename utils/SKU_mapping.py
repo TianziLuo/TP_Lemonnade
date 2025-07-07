@@ -71,7 +71,7 @@ def SKU_out():
         os.remove(xlsx_out_path)
 
     tmpl_wb.save(xlsx_out_path)
-    print("✅ Saved .xlsx")
+    print("✅ Saved SKU.xlsx")
 
     # ========= Use Excel COM to save as .xls =========
     excel = win32.gencache.EnsureDispatch("Excel.Application")
@@ -85,12 +85,12 @@ def SKU_out():
     finally:
         excel.Quit()
 
-    print("✅ Saved .xls")
+    print("✅ Saved SKU.xls")
 
     # ========= Delete the intermediate .xlsx file from Downloads =========
     if os.path.exists(xlsx_out_path):
         os.remove(xlsx_out_path)
-        print("🗑️ Deleted .xlsx")
+        print("🗑️ Deleted SKU.xlsx")
 
 '''
 if __name__ == "__main__":

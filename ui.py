@@ -31,7 +31,7 @@ def create_ui():
     root = tk.Tk()
     root.title("Inventory Update_lemonnade☀️")
     root.configure(bg=BG_COLOR)
-    root.geometry("450x725")
+    root.geometry("450x595")
     root.resizable(False, False)
 
     # ===== Header  =====
@@ -46,27 +46,23 @@ def create_ui():
     # SKU Section
     add_section(frame, "🍋 SKU Mapping 🍋", [
         ("Open 1.1", tp_tasks.step_1_1),
-        ("Generate SKU Mapping", tp_tasks.step_1_2),
-        ("Copy SKU File", tp_tasks.step_1_3),
+        ("Generate & Copy SKU Mapping", tp_tasks.step_1_2),
     ])
 
     # TP Upload Section
     add_section(frame, "🍋 TP Upload 🍋", [
         ("Open 2.1", tp_tasks.step_2_1),
         ("Generate TP.csv", tp_tasks.step_2_2),
-        ("Upload New TP", tp_tasks.step_2_3a),
-        ("Upload Old TP", tp_tasks.step_2_3b),
-        ("Copy TP.csv", tp_tasks.step_2_4),
-        ("Open SKUINV", tp_tasks.step_2_5),
-        ("Copy SKUINV File", tp_tasks.step_2_6),
+        ("Upload & Copy TP.csv", tp_tasks.step_2_3),
+        ("Open SKUINV", tp_tasks.step_2_4),
+        ("Copy SKUINV", tp_tasks.step_2_5),
     ])
 
     # DXM Section
     add_section(frame, "🍋 DXM 🍋", [
         ("Rename DXM", tp_tasks.step_3_1),
         ("Open 2.2", tp_tasks.step_3_2),
-        ("Generate Inventory Update", tp_tasks.step_3_3),
-        ("Copy Inventory Update", tp_tasks.step_3_4),
+        ("Generate & Copy Inventory Update", tp_tasks.step_3_3),
     ])
 
     root.mainloop()
