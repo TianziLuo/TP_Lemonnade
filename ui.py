@@ -31,7 +31,7 @@ def create_ui():
     root = tk.Tk()
     root.title("Inventory Update_lemonnade☀️")
     root.configure(bg=BG_COLOR)
-    root.geometry("450x595")
+    root.geometry("450x525")
     root.resizable(False, False)
 
     # ===== Header  =====
@@ -52,16 +52,14 @@ def create_ui():
     # TP Upload Section
     add_section(frame, "🍋 TP Upload 🍋", [
         ("Open 2.1", tp_tasks.step_2_1),
-        ("Generate TP.csv", tp_tasks.step_2_2),
-        ("Upload & Copy TP.csv", tp_tasks.step_2_3),
+        ("Generate & Upload & Copy TP.csv", tp_tasks.step_2_2),
         ("Open SKUINV", tp_tasks.step_2_4),
         ("Copy SKUINV", tp_tasks.step_2_5),
     ])
 
     # DXM Section
     add_section(frame, "🍋 DXM 🍋", [
-        ("Rename DXM", tp_tasks.step_3_1),
-        ("Open 2.2", tp_tasks.step_3_2),
+        ("Rename & Open", tp_tasks.step_3_1),
         ("Generate & Copy Inventory Update", tp_tasks.step_3_3),
     ])
 

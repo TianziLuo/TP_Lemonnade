@@ -35,8 +35,8 @@ def step_2_2():
         output_path=downloads / "TP-Upload.csv"
     )
 
-def step_2_3():
-    # new TP
+    time.sleep(1)
+
     teapplix_upload(
         username="wayfaircolourtree",
         email="wayfair.colourtree@gmail.com",
@@ -65,6 +65,7 @@ def step_2_3():
         ]
     )
 
+
 def step_2_4():
     open_excel_file(r"C:\Frank\易仓-TP\SKUINV.xlsx")
 
@@ -76,8 +77,12 @@ def step_2_5():
     )
 
 # === Step 3 ===
-def step_3_1(): rename_DXM()
-def step_3_2(): open_excel_file(r"C:\Frank\2.2_店小秘.xlsx")
+def step_3_1(): 
+    rename_DXM()
+
+    time.sleep(1)
+
+    open_excel_file(r"C:\Frank\2.2_店小秘.xlsx")
 
 def step_3_3():
     output = downloads / "店小秘 更新库存.xlsx"
